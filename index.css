@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 2%;
+        --foreground: 0 0% 100%;
+        --card: 0 0% 4%;
+        --card-foreground: 0 0% 100%;
+        --popover: 0 0% 4%;
+        --popover-foreground: 0 0% 100%;
+        --primary: 20 100% 50%;
+        --primary-foreground: 0 0% 0%;
+        --secondary: 0 0% 7%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 0 0% 7%;
+        --muted-foreground: 240 5% 65%;
+        --accent: 0 0% 10%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 10%;
+        --input: 0 0% 10%;
+        --ring: 20 100% 50%;
+        --radius: 0.375rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        background-color: #050505;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: "JetBrains Mono", monospace;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        pointer-events: none;
+        opacity: 0.035;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+}
+
+/* Solana wallet adapter overrides */
+.wallet-adapter-button {
+    background-color: #FF5500 !important;
+    color: #000000 !important;
+    font-family: "JetBrains Mono", monospace !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.18em !important;
+    border-radius: 9999px !important;
+    height: 40px !important;
+    padding: 0 20px !important;
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s !important;
+}
+.wallet-adapter-button:not([disabled]):hover {
+    background-color: #ff6a1f !important;
+    box-shadow: 0 0 28px rgba(255, 85, 0, 0.35) !important;
+    transform: scale(1.04) !important;
+}
+.wallet-adapter-button-trigger {
+    background-color: #FF5500 !important;
+}
+.wallet-adapter-dropdown-list {
+    background: #0A0A0A !important;
+    border: 1px solid #1A1A1A !important;
+    border-radius: 8px !important;
+}
+.wallet-adapter-dropdown-list-item {
+    font-family: "JetBrains Mono", monospace !important;
+    font-size: 12px !important;
+}
+.wallet-adapter-dropdown-list-item:not([disabled]):hover {
+    background: #161616 !important;
+}
+.wallet-adapter-modal-wrapper {
+    background: #0A0A0A !important;
+    border: 1px solid #1A1A1A !important;
+    border-radius: 12px !important;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.8) !important;
+    font-family: "JetBrains Mono", monospace !important;
+}
+.wallet-adapter-modal-title {
+    font-family: Unbounded, sans-serif !important;
+    font-size: 15px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: #ffffff !important;
+}
+.wallet-adapter-modal-button-close {
+    background-color: #FF5500 !important;
+}
+.wallet-adapter-modal-button-close svg {
+    fill: #000000 !important;
+}
+.wallet-adapter-modal-list .wallet-adapter-button {
+    border-radius: 8px !important;
+}
+.wallet-adapter-modal-list-more {
+    color: #A1A1AA !important;
+    font-family: "JetBrains Mono", monospace !important;
+}
+.wallet-adapter-modal-middle {
+    background: #0A0A0A !important;
+}
+.wallet-adapter-modal-middle-button {
+    background-color: #FF5500 !important;
+    color: #000000 !important;
+    border-radius: 9999px !important;
+}
+.wallet-adapter-modal-overlay {
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(6px);
+}
+
+/* Lenis */
+html.lenis, html.lenis body {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}

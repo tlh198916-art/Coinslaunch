@@ -1,0 +1,126 @@
+{
+  "theme": "dark",
+  "typography": {
+    "fonts": {
+      "headings": "Unbounded, sans-serif",
+      "body": "JetBrains Mono, monospace",
+      "accents": "Inter, sans-serif"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-black tracking-tighter leading-[0.9]",
+      "h2": "text-3xl md:text-5xl font-bold tracking-tight leading-tight",
+      "h3": "text-xl md:text-2xl font-semibold tracking-tight",
+      "body": "text-sm md:text-base font-normal leading-relaxed text-zinc-400",
+      "labels": "text-xs font-bold uppercase tracking-[0.2em] text-zinc-500"
+    },
+    "rules": [
+      "Use aggressive negative letter-spacing (tracking-tighter) for all Unbounded headings.",
+      "Use JetBrains Mono for form inputs, token metrics, and technical data.",
+      "Never center-align headings unless it's explicitly for the hero text overlay."
+    ]
+  },
+  "colors": {
+    "backgrounds": {
+      "page": "#050505",
+      "surface": "#0A0A0A",
+      "surface_elevated": "#121212"
+    },
+    "borders": {
+      "subtle": "#1A1A1A",
+      "focus": "#FF5500"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "tertiary": "#52525B"
+    },
+    "brand": {
+      "primary": "#FF5500",
+      "primary_hover": "#E64D00",
+      "glow": "rgba(255, 85, 0, 0.15)"
+    },
+    "rules": [
+      "Maintain a strict monochromatic structural discipline. Deep black backgrounds, stark white text.",
+      "Use the Electric Amber/Orange (#FF5500) strictly for primary conversion actions (Wallet Connect, Next/Deploy buttons) and active states.",
+      "Avoid 'crypto-blue' entirely. Stick to the aggressive space/rocket theme."
+    ]
+  },
+  "visual_enhancers": {
+    "surfaces": [
+      "No full-screen gradients. Use deep space black (#050505) with 1px subtle borders (#1A1A1A).",
+      "For sticky headers, use heavy glassmorphism: backdrop-blur-2xl bg-[#050505]/70 with a 1px border-b border-white/5.",
+      "Add subtle noise/grain texture overlays to the body background to kill digital flatness."
+    ],
+    "buttons": [
+      "Pill-shaped (rounded-full) for primary CTAs (Wallet Connect).",
+      "Sharp or slightly rounded (rounded-md) for form elements and utility actions.",
+      "Primary button hover: slight scale (scale-105), brighter orange, and subtle amber drop shadow."
+    ]
+  },
+  "layouts": {
+    "grids": "Use aggressive asymmetry. Utilize CSS Grid for the Token Creator form (bento box style: overlapping panels, sharp 1px borders).",
+    "spacing": "Generous Spacing Philosophy. Use p-8 to p-12 inside containers. Ensure sections have massive padding (py-24 to py-32) to separate content.",
+    "hero": "Massive typography overlaying a dark cinematic background. Text should take up 80% of the viewport width."
+  },
+  "motion": {
+    "scroll": "MANDATORY: Use Lenis for smooth scrolling to give the site premium momentum.",
+    "animations": [
+      "Hero text: Framer Motion staggered line-by-line reveal on load.",
+      "Form entrance: Subtly slide up and fade in.",
+      "Marquee: Slow, continuous horizontal scroll for the 'How-to-use' or 'CoinLaunch features' ribbon."
+    ],
+    "interactions": "Micro-animations on every hover. Wallet connect button should have a magnetic or glowing hover state."
+  },
+  "accessibility": {
+    "contrast": "Ensure minimum 4.5:1 for body text against #050505. Use #FFFFFF for primary text, #A1A1AA for readable secondary text.",
+    "focus": "All form inputs must have a bright #FF5500 1px ring on focus focus:ring-1 focus:ring-[#FF5500] focus:border-[#FF5500] outline-none.",
+    "testing": "All interactive elements (buttons, inputs, accordions) MUST include a data-testid attribute formatted as kebab-case-role."
+  },
+  "components": {
+    "fee_banner": "Fixed at top. bg-[#FF5500] text-black font-bold text-xs uppercase tracking-widest py-2 px-4 flex justify-center items-center z-50.",
+    "header": "Sticky top, directly under fee banner. Glassmorphism. Logo on left (Rocket icon + CoinLaunch), Wallet Connect button on right (Phantom/Solflare branding).",
+    "hero": "Kinetic typography. 'CREATE A SOLANA MEME COIN IN SECONDS. NO CODING.' Masked line reveal. Subtle abstract/rocket background image masked behind text.",
+    "token_creator_form": "Bento-grid card on the page. Deep black surface, 1px subtle border. Inputs: Token Name, Symbol, Image Upload (dashed border dropzone), Next button.",
+    "marquee": "Use react-fast-marquee. Text: 'FAST • SECURE • NO CODE • AUDITED • COINLAUNCH'. Font: JetBrains Mono, uppercase, text-zinc-700.",
+    "manifesto_steps": "Numbered chapters (01, 02, 03) in massive Unbounded font (text-6xl text-zinc-800). Explanation in bright white.",
+    "faq": "Shadcn Accordion. Minimal styling. border-b border-[#1A1A1A]. Questions in Unbounded text-lg, answers in JetBrains Mono text-zinc-400."
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1700508317396-e343a69ac72f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwzfHxvcmFuZ2UlMjByb2NrZXQlMjBsYXVuY2glMjBjaW5lbWF0aWN8ZW58MHx8fHwxNzg3NjM2NzUyfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Cinematic orange rocket launch for the hero background, apply heavy black overlay (bg-black/70) so text pops."
+    },
+    "abstract_texture": {
+      "url": "https://images.pexels.com/photos/29506609/pexels-photo-29506609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Dark abstract tech neon light backdrop. Use as a subtle section divider or blend into the form background."
+    },
+    "solana_accent": {
+      "url": "https://images.unsplash.com/photo-1672911640671-65d5dfa97d26?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwzfHxzb2xhbmElMjBjb2luJTIwM2QlMjByZW5kZXJ8ZW58MHx8fHwxNzg3NjM2NzUyfDA&ixlib=rb-4.1.0&q=85",
+      "description": "3D crypto coin render, use in the 'How it works' section."
+    }
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: Use .js extensions for your React components, NOT .tsx.",
+    "CRITICAL: Install framer-motion, @studio-freight/react-lenis, react-fast-marquee, lucide-react.",
+    "DO NOT build basic HTML selects or accordions. Use shadcn/ui components but customize them extensively for the dark theme.",
+    "DO NOT use standard rounded cards. Go for sharp edges or max 8px (rounded-md).",
+    "Never use generic placeholder images, use the provided Unsplash URLs.",
+    "Ensure every interactive element has a data-testid attribute.",
+    "Do NOT use transparent backgrounds for the sticky header; use backdrop-blur and a semi-transparent hex.",
+    "Prioritize optical alignment. Don't center text aimlessly."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid the 'AI slop' aesthetic. Make creative, distinctive frontends.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition (e.g., transition: all). Add transitions for specific properties excluding transforms.",
+    "You MUST NOT center align the app container. Do not add .App { text-align: center; }.",
+    "Always use modern button styles (pill-shaped or sharp) with interaction animations & color relevant to the app style.",
+    "NEVER use AI assistant Emoji characters (🤖🧠💭💡) for icons. Use lucide-react or phosphor-icons.",
+    "Every interaction needs micro-animations - hover states, transitions, entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Use sonner for toasts (/app/src/components/ui/sonner.js)."
+  ]
+}
